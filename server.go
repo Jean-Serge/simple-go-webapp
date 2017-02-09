@@ -8,16 +8,12 @@ import (
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
-  log.Printf("[%s] %q\n", r.Method, r.URL.String())
   fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
 }
 
 func Tmp(w http.ResponseWriter, r *http.Request) {
-  log.Printf("[%s] %q\n", r.Method, r.URL.String())
   fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
 }
-
-
 
 func main() {
   const PORT = 8080
