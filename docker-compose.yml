@@ -1,0 +1,12 @@
+version: '2'
+services:
+  simple-webapp-db:
+    image: postgres:9.6
+    restart: always
+    container_name: simple-webapp-db
+    ports:
+      - 5555:5432/tcp
+    environment:
+      - POSTGRES_DB=simple-webapp
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=mdp
